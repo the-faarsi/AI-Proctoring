@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Facemesh </title>
+	
+<script src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+<script src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+<script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script>
+  <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>
+ <script defer src="face-api.min.js"></script>
+    <script defer src="index.js"></script>
+
+
+<style>
+
+body{
+background-color: #F67280;
+}
+button{
+   background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  justify-content: center;
+  margin-left: 800px;
+}
+#container{
+position: relative;
+}
+
+
+
+
+    #video{
+      position: absolute;
+    margin-top: -70px;
+    align-items: center;
+    /*bottom: 0;*/
+    margin-left: 300px;
+    /*right: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    }
+    #overlay{
+        position: absolute;
+    /*top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    /*width: 640;*/
+    /*height: 480;*/
+    visibility: hidden;
+    }
+
+</style>
+
+
+
+
+</head>
+<body>
+<h1 style="font-size: 100px;margin-top: 0px;text-align: center;">AI Proctoring</h1>
+
+<div id="container" class="margin">
+  <video  id="video" width="1080" height="720"autoplay muted></video>
+  <canvas id="overlay"></canvas>
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div>
+  <button onclick="main()">Verify</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
